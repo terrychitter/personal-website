@@ -1,0 +1,19 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "This is my personal website used to showcase my projects as well as provide details about myself.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrychitter/personal-website.git"
+  },
+  "author": "Terry Chitter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/terrychitter/personal-website/issues"
+  },
+  "homepage": "https://github.com/terrychitter/personal-website#readme"
+}
