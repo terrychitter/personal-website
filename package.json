@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/terrychitter/personal-website/issues"
   },
-  "homepage": "https://github.com/terrychitter/personal-website#readme"
+  "homepage": "https://github.com/terrychitter/personal-website#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
 }
