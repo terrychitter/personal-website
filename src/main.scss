@@ -1,0 +1,24 @@
+// Default variable overrides here
+
+// Colour styling
+$primary: #56CEB6;
+$secondary: #149F8A;
+
+// Font Styling
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+$font-family-base: 'Oxygen', sans-serif;
+$headings-font-family: 'Montserrat', sans-serif;
+
+// Button Styling
+$btn-padding-x: 0.9rem;
+$btn-padding-y: 0.6rem;
+
+$enable-rounded: true;
+$enable-negative-margins: true;
+
+// Import boostrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Import other styles
+@import "styles.css";

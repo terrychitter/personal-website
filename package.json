@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is my personal website used to showcase my projects as well as provide details about myself.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
