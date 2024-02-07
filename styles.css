@@ -13,6 +13,27 @@ body {
     background-color: white;
 }
 
+#scroll-down-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
 /* About section */
 #hero-section, #about-section, #portfolio-section, #resume-section, #contact-section {
     position: relative;
@@ -82,12 +103,13 @@ body {
 
 /* About section */
 #about-section {
-    background: linear-gradient(270deg, #246655, #04eeb1);
-    background-size: 400% 400%;
+    color:  white;
+    background: linear-gradient(270deg, #149f8a, #366c64, #24786b);
+    background-size: 600% 600%;
 
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
+    -webkit-animation: AnimationName 17s ease infinite;
+    -moz-animation: AnimationName 17s ease infinite;
+    animation: AnimationName 17s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {

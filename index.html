@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <button type="button" id="scroll-down-button" class="btn btn-primary"><i class="bi bi-arrow-down"></i></button>
     <header class="section pt-3" id="navigation-section">
         <!-- Navigation -->
         <!-- SOURCE: https://github.com/abdulhaseeb456 -->
@@ -50,29 +51,32 @@
     <main>
         <!-- Hero Section -->
         <section id="hero-section">
-                <img src="https://i.ibb.co/dm2jDbT/cartoon.png" alt="cartoon" id="cartoon" loading="lazy">
-                <div id="hero-content-wrapper" class="pt-5">
-                    <div id="hero-content" class="ps-5 pt-5">
-                        <h1 class="display-1">Hello, I'm<br><span class="text-secondary">Terry Chitter</span></h1>
-                        <h2 class="h2">Web | App Developer</h2>
-                        <p class="pt-3 fs-5">Enthusiastic software engineering grad committed to dreaming up inventive solutions and stretching the limits of technology with a sprinkle of creativity.</p>
-                        <ul class="d-flex fs-1 ps-0" style="gap: 1.3rem;">
-                            <li>
-                                <a href="https://www.linkedin.com/in/terry-chitter-91a950201/" target=”_blank”><i class="bi bi-linkedin social-media-link"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/terrychitter" target=”_blank”><i class="bi bi-github social-media-link"></i></a>
-                            </li>
-                            <li>
-                                <a href=""><i class="bi bi-linkedin social-media-link"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+            <img src="https://i.ibb.co/dm2jDbT/cartoon.png" alt="cartoon" id="cartoon" loading="lazy">
+            <div id="hero-content-wrapper" class="pt-5">
+                <div id="hero-content" class="ps-5 pt-5">
+                    <h1 class="display-1">Hello, I'm<br><span class="text-secondary">Terry Chitter</span></h1>
+                    <h2 class="h2">Web | App Developer</h2>
+                    <p class="pt-3 fs-5">Enthusiastic software engineering grad committed to dreaming up inventive
+                        solutions and stretching the limits of technology with a sprinkle of creativity.</p>
+                    <ul class="d-flex fs-1 ps-0" style="gap: 1.3rem;">
+                        <li>
+                            <a href="https://www.linkedin.com/in/terry-chitter-91a950201/" target=”_blank”><i
+                                    class="bi bi-linkedin social-media-link"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/terrychitter" target=”_blank”><i
+                                    class="bi bi-github social-media-link"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="bi bi-linkedin social-media-link"></i></a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
         </section>
         <!-- About Me Section -->
         <section class="section" id="about-section">
-            <ul class="bgAnimation">
+            <ul class="bgAnimation" id="about-bg-animation">
                 <li></li>
                 <li></li>
                 <li></li>
@@ -275,6 +279,87 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- Scroll button JS -->
+    <script>
+        // Function to debounce scroll events
+        function debounce(func, delay) {
+            let timeoutId;
+            return function() {
+                const context = this;
+                const args = arguments;
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(function() {
+                    func.apply(context, args);
+                }, delay);
+            };
+        }
+
+        // Scroll event handler with debouncing
+        window.addEventListener('scroll', debounce(function() {
+            var button = document.getElementById('scroll-down-button');
+            var scrollY = window.scrollY || window.pageYOffset;
+            var rem = parseFloat(getComputedStyle(document.documentElement).fontSize); 
+            var bottomRem = 2 - scrollY / rem; 
+            button.style.bottom = bottomRem + 'rem'; 
+            button.style.right = '2rem'; 
+        }, 50));
+
+        document.getElementById('scroll-down-button').addEventListener('click', function() {
+    // Check if the button is currently at the contact section
+    if (this.classList.contains('at-contact-section')) {
+        // Scroll back to the top of the page
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Optional: Smooth scrolling animation
+        });
+        // Restore the original button design and function
+        this.classList.remove('at-contact-section');
+        this.style.backgroundColor = ''; // Restore original background color
+        this.style.borderColor = ''; // Restore original background color
+        this.innerHTML = '<i class="bi bi-arrow-down"></i>'; // Restore original inner text
+    } else {
+        // Find the next snap object
+        var snapObjects = document.querySelectorAll('section');
+        var currentScrollY = window.scrollY || window.pageYOffset;
+        var nextSnapObject;
+        var contactSectionReached = false;
+
+        for (var i = 0; i < snapObjects.length; i++) {
+            var snapObject = snapObjects[i];
+            var snapObjectTop = snapObject.offsetTop;
+
+            // Check if the snap object is below the current scroll position
+            if (snapObjectTop > currentScrollY) {
+                nextSnapObject = snapObject;
+                // Check if the next snap object is the contact section
+                if (snapObject.id === 'contact-section') {
+                    contactSectionReached = true;
+                }
+                break;
+            }
+        }
+
+        // Scroll to the next snap object
+        if (nextSnapObject) {
+            var scrollToY = nextSnapObject.offsetTop;
+            window.scrollTo({
+                top: scrollToY,
+                behavior: 'smooth' // Optional: Smooth scrolling animation
+            });
+
+            // Check if the contact section is reached
+            if (contactSectionReached) {
+                // Change button background color to #149F8A
+                this.style.backgroundColor = '#149F8A';
+                this.style.borderColor = '#149F8A';
+                // Change button inner text to arrow-up icon
+                this.innerHTML = '<i class="bi bi-arrow-up"></i>';
+                // Update button state to indicate at contact section
+                this.classList.add('at-contact-section');
+            }
+        }
+    }
+});
     </script>
 </body>
 

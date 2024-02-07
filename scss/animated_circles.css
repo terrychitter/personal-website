@@ -92,6 +92,10 @@ ul#contact-bg-animation.bgAnimation li {
 	background-color: #149F8A;
 }
 
+ul#about-bg-animation.bgAnimation li {
+	background-color: black;
+}
+
 @keyframes bgAni {
 	from {
 		transform: translateY(0) rotate(0deg);
