@@ -1,0 +1,20 @@
+/* SOURCE: https://codepen.io/MathieuRichard/pen/pooZdV */
+.scroll {
+    width: 20px;
+    height: 200px;
+    overflow: auto;
+    float: left;
+    margin: 0 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+}

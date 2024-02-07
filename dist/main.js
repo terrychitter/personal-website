@@ -1,0 +1,1 @@
+(()=>{"use strict";const{Octokit:t}=require("octokit"),o=new t({auth:"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"});console.log(o)})();

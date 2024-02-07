@@ -1,7 +1,7 @@
 // Default variable overrides here
 
 // Colour styling
-$primary: #56CEB6;
+$primary: black;
 $secondary: #149F8A;
 
 // Font Styling
@@ -17,8 +17,9 @@ $btn-padding-y: 0.6rem;
 $enable-rounded: true;
 $enable-negative-margins: true;
 
+body {
+    background-color: red;
+}
+
 // Import boostrap
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
-// Import other styles
-@import "styles.css";
