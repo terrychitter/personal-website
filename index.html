@@ -9,19 +9,48 @@
     <link rel="stylesheet" href="/scss/main.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="scss/scrollbar.css">
+    <link rel="stylesheet" href="scss/navbar.css">
     <link rel="stylesheet" href="scss/animated_circles.css">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav></nav>
+    <header class="section pt-3" id="navigation-section">
+        <!-- Navigation -->
+        <!-- SOURCE: https://github.com/abdulhaseeb456 -->
+        <div class="logo"></div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#hero-section" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#about-section">About</a>
+                </li>
+                <li>
+                    <a href="#portfolio-section">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#resume-section">Resume</a>
+                </li>
+                <li>
+                    <a href="#contact-section">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
     <main>
         <!-- Hero Section -->
-        <header class="section" id="hero-section">
-        </header>
-        </div>
+        <section id="hero-section">
+
+        </section>
         <!-- About Me Section -->
         <section class="section" id="about-section">
             <ul class="bgAnimation">
@@ -196,11 +225,13 @@
                     <div class="row text-center" style="font-size: 0.8rem;">
                         <div class="d-flex justify-content-center align-items-center">
                             <div>
-                                Images by <a href="https://midjourney.com"><img src="https://i.ibb.co/njrb0Dk/midjourney-logo.png" alt="midjourney-logo"></a>
+                                Images by <a href="https://midjourney.com"><img
+                                        src="https://i.ibb.co/njrb0Dk/midjourney-logo.png" alt="midjourney-logo"></a>
                             </div>
                             <div class="mx-3">|</div>
                             <div>
-                                Icons by<a href="https://icons.getbootstrap.com" class="ms-2"><i class="bi bi-bootstrap-fill"></i></a>
+                                Icons by<a href="https://icons.getbootstrap.com" class="ms-2"><i
+                                        class="bi bi-bootstrap-fill"></i></a>
                             </div>
                         </div>
                     </div>

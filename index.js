@@ -1,7 +1,7 @@
 // import { Octokit } from "octokit";
 
 // const octokit = new Octokit({
-//     auth: "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"
+//     auth: ""
 // })
 
 // async function fetchRepos() {
