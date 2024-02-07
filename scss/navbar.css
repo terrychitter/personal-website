@@ -8,7 +8,7 @@ header {
     position: absolute;
     width: 100vw;
     top: 0;
-    background: #fff;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,7 +67,7 @@ header nav ul li a.active {
         left: -100%;
         top: 70px;
         width: 100%;
-        background: #fff;
+        background: white;
         padding: 30px;
         transition: 0.3s;
     }
