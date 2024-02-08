@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="scss/animated_circles.css">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Boxicons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer async></script>
 </head>
 
 <body>
@@ -88,18 +90,76 @@
             </ul>
             <div class="content container py-3">
                 <h2 class="h2 fs-1 text-center pb-4">About Me</h2>
-                <div class="row align-content-center">
-                    <div class="col-12 col-md">
-                        <p class="text-center text-md-start">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Saepe dolores sunt laudantium ullam odio facilis magnam autem, aliquid maxime porro voluptas
-                            optio eveniet quisquam? Similique vero fugiat iusto voluptatum ut.</p>
-                    </div>
-                    <div class="col-md d-flex justify-content-center">
-                        <div class="">
-                            <img src="https://placehold.co/450x200" width="100%">
+                <p align="justify" style="font-size: 0.9rem">Dedicated IT
+                    professional with a
+                    Bachelor of Science in Information
+                    Technology, specializing in web and app development while actively pursuing knowledge in machine
+                    learning and AI. Strong advocate for collaboration, demonstrated by winning third place in the
+                    Eduvos 2022 HackJam Hackathon.
+                    <br><br>
+                    Committed to delivering excellence in all projects, thriving on
+                    challenges, and showcasing resilience and adaptability. Aspires to further expertise in machine
+                    learning and AI, contributing to industry advancements and seeking opportunities aligned with a
+                    passion for quality work and collaborative success.
+                </p>
+                <h3 class="h3 py-3 text-center">Skills and Tools</h3>
+                <div id="languages-container" class="rounded  p-4">
+                    <div class="row row-cols-auto">
+                        <div class="col">
+                            <a href="https://angular.io" target="_blank"><box-icon name="angular" type="logo"
+                                    color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://getbootstrap.com" target="_blank"><box-icon name="bootstrap" type="logo"
+                                    color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.w3schools.com/css/" target="_blank"><box-icon name="css3" type="logo"
+                                    color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.figma.com" target="_blank"><box-icon name="figma" type="logo"
+                                    color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://firebase.google.com" target="_blank"><box-icon name="firebase" type="logo"
+                                    color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://git-scm.com" target="_blank"><box-icon name="git" type="logo" color="black"
+                                    size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.w3schools.com/html/" target="_blank"><box-icon name="html5" type="logo"
+                                    color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.w3schools.com/js/" target="_blank"><box-icon name="javascript"
+                                    type="logo" color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.mysql.com" target="_blank"><img
+                                    src="https://i.ibb.co/zh9SX1s/image.png" class="mt-2" alt="image" width="60px"></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://nodejs.org" target="_blank"><box-icon name="nodejs" type="logo"
+                                    color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.php.net" target="_blank"><box-icon name="php" type="logo" color="black"
+                                    size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.python.org" target="_blank"><box-icon name="python" type="logo"
+                                    color="black" size="lg"></box-icon></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.typescriptlang.org" target="_blank"><box-icon name="typescript"
+                                    type="logo" color="black" size="lg"></box-icon></a>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
         <!-- Portfolio Section -->
@@ -284,82 +344,82 @@
         // Function to debounce scroll events
         function debounce(func, delay) {
             let timeoutId;
-            return function() {
+            return function () {
                 const context = this;
                 const args = arguments;
                 clearTimeout(timeoutId);
-                timeoutId = setTimeout(function() {
+                timeoutId = setTimeout(function () {
                     func.apply(context, args);
                 }, delay);
             };
         }
 
         // Scroll event handler with debouncing
-        window.addEventListener('scroll', debounce(function() {
+        window.addEventListener('scroll', debounce(function () {
             var button = document.getElementById('scroll-down-button');
             var scrollY = window.scrollY || window.pageYOffset;
-            var rem = parseFloat(getComputedStyle(document.documentElement).fontSize); 
-            var bottomRem = 2 - scrollY / rem; 
-            button.style.bottom = bottomRem + 'rem'; 
-            button.style.right = '2rem'; 
+            var rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+            var bottomRem = 2 - scrollY / rem;
+            button.style.bottom = bottomRem + 'rem';
+            button.style.right = '2rem';
         }, 50));
 
-        document.getElementById('scroll-down-button').addEventListener('click', function() {
-    // Check if the button is currently at the contact section
-    if (this.classList.contains('at-contact-section')) {
-        // Scroll back to the top of the page
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Optional: Smooth scrolling animation
-        });
-        // Restore the original button design and function
-        this.classList.remove('at-contact-section');
-        this.style.backgroundColor = ''; // Restore original background color
-        this.style.borderColor = ''; // Restore original background color
-        this.innerHTML = '<i class="bi bi-arrow-down"></i>'; // Restore original inner text
-    } else {
-        // Find the next snap object
-        var snapObjects = document.querySelectorAll('section');
-        var currentScrollY = window.scrollY || window.pageYOffset;
-        var nextSnapObject;
-        var contactSectionReached = false;
+        document.getElementById('scroll-down-button').addEventListener('click', function () {
+            // Check if the button is currently at the contact section
+            if (this.classList.contains('at-contact-section')) {
+                // Scroll back to the top of the page
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth' // Optional: Smooth scrolling animation
+                });
+                // Restore the original button design and function
+                this.classList.remove('at-contact-section');
+                this.style.backgroundColor = ''; // Restore original background color
+                this.style.borderColor = ''; // Restore original background color
+                this.innerHTML = '<i class="bi bi-arrow-down"></i>'; // Restore original inner text
+            } else {
+                // Find the next snap object
+                var snapObjects = document.querySelectorAll('section');
+                var currentScrollY = window.scrollY || window.pageYOffset;
+                var nextSnapObject;
+                var contactSectionReached = false;
 
-        for (var i = 0; i < snapObjects.length; i++) {
-            var snapObject = snapObjects[i];
-            var snapObjectTop = snapObject.offsetTop;
+                for (var i = 0; i < snapObjects.length; i++) {
+                    var snapObject = snapObjects[i];
+                    var snapObjectTop = snapObject.offsetTop;
 
-            // Check if the snap object is below the current scroll position
-            if (snapObjectTop > currentScrollY) {
-                nextSnapObject = snapObject;
-                // Check if the next snap object is the contact section
-                if (snapObject.id === 'contact-section') {
-                    contactSectionReached = true;
+                    // Check if the snap object is below the current scroll position
+                    if (snapObjectTop > currentScrollY) {
+                        nextSnapObject = snapObject;
+                        // Check if the next snap object is the contact section
+                        if (snapObject.id === 'contact-section') {
+                            contactSectionReached = true;
+                        }
+                        break;
+                    }
                 }
-                break;
-            }
-        }
 
-        // Scroll to the next snap object
-        if (nextSnapObject) {
-            var scrollToY = nextSnapObject.offsetTop;
-            window.scrollTo({
-                top: scrollToY,
-                behavior: 'smooth' // Optional: Smooth scrolling animation
-            });
+                // Scroll to the next snap object
+                if (nextSnapObject) {
+                    var scrollToY = nextSnapObject.offsetTop;
+                    window.scrollTo({
+                        top: scrollToY,
+                        behavior: 'smooth' // Optional: Smooth scrolling animation
+                    });
 
-            // Check if the contact section is reached
-            if (contactSectionReached) {
-                // Change button background color to #149F8A
-                this.style.backgroundColor = '#149F8A';
-                this.style.borderColor = '#149F8A';
-                // Change button inner text to arrow-up icon
-                this.innerHTML = '<i class="bi bi-arrow-up"></i>';
-                // Update button state to indicate at contact section
-                this.classList.add('at-contact-section');
+                    // Check if the contact section is reached
+                    if (contactSectionReached) {
+                        // Change button background color to #149F8A
+                        this.style.backgroundColor = '#149F8A';
+                        this.style.borderColor = '#149F8A';
+                        // Change button inner text to arrow-up icon
+                        this.innerHTML = '<i class="bi bi-arrow-up"></i>';
+                        // Update button state to indicate at contact section
+                        this.classList.add('at-contact-section');
+                    }
+                }
             }
-        }
-    }
-});
+        });
     </script>
 </body>
 

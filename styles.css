@@ -2,9 +2,10 @@
 html {
     scroll-snap-type: y mandatory;
 }
+
 /* Section Content */
 @media (min-width: 1200px) {
-    .section > .container {
+    .section>.container {
         max-width: 870px;
     }
 }
@@ -25,9 +26,11 @@ body {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -35,7 +38,11 @@ body {
 
 
 /* About section */
-#hero-section, #about-section, #portfolio-section, #resume-section, #contact-section {
+#hero-section,
+#about-section,
+#portfolio-section,
+#resume-section,
+#contact-section {
     position: relative;
     min-height: 100vh;
     scroll-snap-align: start;
@@ -55,8 +62,8 @@ body {
     #hero-section #cartoon {
         top: 50%;
         -ms-transform: translateY(-50%);
-        transform: translateY(-50%); 
-    }    
+        transform: translateY(-50%);
+    }
 }
 
 #hero-content-wrapper {
@@ -88,7 +95,8 @@ body {
         color: white;
         bottom: 2rem;
         left: 0;
-        padding-inline: 0;;
+        padding-inline: 0;
+        ;
     }
 
     #hero-content .social-media-link {
@@ -103,7 +111,7 @@ body {
 
 /* About section */
 #about-section {
-    color:  white;
+    color: white;
     background: linear-gradient(270deg, #149f8a, #366c64, #24786b);
     background-size: 600% 600%;
 
@@ -113,20 +121,84 @@ body {
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
+
+/* SOURCE: https://www.proglobalbusinesssolutions.com/css-hover-effects/ */
+#languages-container box-icon::before,
+#languages-container img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #149F8A;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+#languages-container box-icon:hover::before,
+#languages-container img:hover::before {
+    transform: scale(1.1);
+    border-radius: 50px;
+    background: white;
+    padding: 10px;
+    box-shadow: 20px 20px 60px #118775,
+        -20px -20px 60px #17b79f;
+}
+
+#languages-container box-icon:hover,
+#languages-container img:hover {
+    color: #149F8A;
+    border-radius: 50px;
+    background: white;
+    padding: 10px;
+    box-shadow: 20px 20px 60px #118775,
+        -20px -20px 60px #17b79f;
+}
+
+/* END OF SOURCE */
 
 /* Portfolio section */
 #portfolio-section {
@@ -140,19 +212,45 @@ body {
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 /* Resume section */
@@ -166,19 +264,45 @@ body {
 }
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
+
 @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
 
 #resume-section .content.container {
@@ -212,16 +336,17 @@ body {
     background-color: black;
 }
 
-#contact-section a{
+#contact-section a {
     color: white;
     text-decoration: none;
 }
 
 /* Form styling */
-form {   
+form {
     background-color: white;
     color: black;
 }
+
 form .form-control {
     margin-bottom: 1rem;
 }
@@ -257,7 +382,7 @@ form textarea {
 }
 
 .social-media-link:hover {
-    color:#149f8a;
+    color: #149f8a;
 }
 
 #footer-section .footer-nav-link {
@@ -266,12 +391,12 @@ form textarea {
 }
 
 #footer-section .footer-nav-link:hover {
-    color:#149f8a;
+    color: #149f8a;
     cursor: pointer;
 }
 
 #hr {
-    background-color: rgba(255, 255, 255, 0.274) ;
+    background-color: rgba(255, 255, 255, 0.274);
     border-color: none;
 }
 
