@@ -289,7 +289,8 @@
             </ul>
             <div class="content container d-flex justify-content-center position-relative py-3">
                 <h2 class="h2 fs-1 text-center pb-4">Resume</h2>
-                <button class="btn btn-primary btn-lg fs-4 fw-bold d-flex justify-content-center align-items-center"
+                <button download="assets/CV.pdf"
+                    class="btn btn-primary btn-lg fs-4 fw-bold d-flex justify-content-center align-items-center"
                     id="download-button" style="gap: 1rem">
                     <i class="bi bi-cloud-arrow-down-fill fs-1"></i>
                     <span>Download</span>
@@ -517,6 +518,18 @@
                 }
             }
         });
+
+        // Download CV
+        document.getElementById("download-button").addEventListener("click", function () {
+            var downloadLink = document.createElement("a");
+            downloadLink.href = "assets/CV.pdf";
+            downloadLink.download = "CV – Terry Chitter.pdf";
+
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        });
+
     </script>
 </body>
 
