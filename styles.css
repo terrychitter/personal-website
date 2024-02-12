@@ -211,6 +211,54 @@ body {
     animation: AnimationName 30s ease infinite;
 }
 
+#portfolio-item-container {
+    padding-inline: 2rem;
+}
+
+.portfolio-item {
+    min-height: 150px;
+    padding: 1.4rem;
+    width: 550px;
+    margin: 0 auto 3rem auto;
+    border-left: 0.5rem solid white;
+}
+
+.portfolio-item img {
+    max-width: 90%;
+}
+
+.portfolio-description {
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: justify;
+    padding-right: 10px;
+}
+
+@media (min-width: 1000px) {
+    .portfolio-item {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .portfolio-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-item {
+        width: 100%;
+    }
+}
+
+
+/* @media (max-width: 500px) {
+    .portfollio-item img {
+        float: center;
+    }
+} */
+
 @-webkit-keyframes AnimationName {
     0% {
         background-position: 0% 50%
@@ -317,9 +365,8 @@ body {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     background-color: #149F8A;
-    border-color: #149F8A;
+    border: 3px black solid;
     border-radius: 50vw;
-    border-width: 0.3rem;
     width: 80%;
     max-width: 350px;
 }

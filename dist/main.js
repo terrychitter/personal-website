@@ -1,1 +1,0 @@
-(()=>{"use strict";const{Octokit:t}=require("octokit"),o=new t({auth:""});console.log(o)})();

@@ -1,29 +1,16 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "description": "This is my personal website used to showcase my projects as well as provide details about myself.",
+  "description": "My personal website to provide my portfolio and details.",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/terrychitter/personal-website.git"
-  },
-  "author": "Terry Chitter",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/terrychitter/personal-website/issues"
-  },
-  "homepage": "https://github.com/terrychitter/personal-website#readme",
   "dependencies": {
     "bootstrap": "^5.3.2",
-    "bourbon": "^7.3.0",
     "octokit": "^3.1.2"
-  },
-  "devDependencies": {
-    "webpack": "^5.90.1",
-    "webpack-cli": "^5.1.4"
   }
 }
