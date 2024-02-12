@@ -365,7 +365,7 @@ body {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     background-color: #149F8A;
-    border: 3px black solid;
+    border: 1.5px black solid;
     border-radius: 50vw;
     width: 80%;
     max-width: 350px;
