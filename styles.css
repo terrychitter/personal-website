@@ -402,6 +402,12 @@ form textarea {
     height: 150px;
 }
 
+form .invalid-feedback {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+
+}
+
 #footer-section {
     color: white;
     scroll-snap-align: end;
@@ -457,4 +463,8 @@ form textarea {
 
 .footer-bottom-items img {
     width: 1.5rem;
+}
+
+#submission-heart {
+    font-size: 15rem;
 }
