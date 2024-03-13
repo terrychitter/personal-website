@@ -1,4 +1,4 @@
-# Project Title
+# My Personal Portfolio Website
 
 This is a JavaScript project that includes an HTML file and various CSS and SCSS files for styling.
 
